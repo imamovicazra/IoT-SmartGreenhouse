@@ -1,0 +1,50 @@
+C:\Users\WIN10\Desktop\Iot\Azra\Win form\Azra-IOT\bin\Debug\Azra-IOT.exe.config
+C:\Users\WIN10\Desktop\Iot\Azra\Win form\Azra-IOT\bin\Debug\Azra-IOT.exe
+C:\Users\WIN10\Desktop\Iot\Azra\Win form\Azra-IOT\bin\Debug\Azra-IOT.pdb
+C:\Users\WIN10\Desktop\Iot\Azra\Win form\Azra-IOT\bin\Debug\FireSharp.dll
+C:\Users\WIN10\Desktop\Iot\Azra\Win form\Azra-IOT\bin\Debug\Microsoft.Threading.Tasks.dll
+C:\Users\WIN10\Desktop\Iot\Azra\Win form\Azra-IOT\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+C:\Users\WIN10\Desktop\Iot\Azra\Win form\Azra-IOT\bin\Debug\Microsoft.Threading.Tasks.Extensions.dll
+C:\Users\WIN10\Desktop\Iot\Azra\Win form\Azra-IOT\bin\Debug\Newtonsoft.Json.dll
+C:\Users\WIN10\Desktop\Iot\Azra\Win form\Azra-IOT\bin\Debug\System.Net.Http.Extensions.dll
+C:\Users\WIN10\Desktop\Iot\Azra\Win form\Azra-IOT\bin\Debug\System.Net.Http.Primitives.dll
+C:\Users\WIN10\Desktop\Iot\Azra\Win form\Azra-IOT\bin\Debug\Microsoft.Threading.Tasks.xml
+C:\Users\WIN10\Desktop\Iot\Azra\Win form\Azra-IOT\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml
+C:\Users\WIN10\Desktop\Iot\Azra\Win form\Azra-IOT\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+C:\Users\WIN10\Desktop\Iot\Azra\Win form\Azra-IOT\bin\Debug\Newtonsoft.Json.xml
+C:\Users\WIN10\Desktop\Iot\Azra\Win form\Azra-IOT\bin\Debug\System.Net.Http.Extensions.xml
+C:\Users\WIN10\Desktop\Iot\Azra\Win form\Azra-IOT\bin\Debug\System.Net.Http.Primitives.xml
+C:\Users\WIN10\Desktop\Iot\Azra\Win form\Azra-IOT\obj\Debug\Azra-IOT.csproj.App.config
+C:\Users\WIN10\Desktop\Iot\Azra\Win form\Azra-IOT\obj\Debug\Azra_IOT.Form1.resources
+C:\Users\WIN10\Desktop\Iot\Azra\Win form\Azra-IOT\obj\Debug\Azra_IOT.Properties.Resources.resources
+C:\Users\WIN10\Desktop\Iot\Azra\Win form\Azra-IOT\obj\Debug\Azra-IOT.csproj.GenerateResource.cache
+C:\Users\WIN10\Desktop\Iot\Azra\Win form\Azra-IOT\obj\Debug\Azra-IOT.csproj.CoreCompileInputs.cache
+C:\Users\WIN10\Desktop\Iot\Azra\Win form\Azra-IOT\obj\Debug\Azra-IOT.csproj.CopyComplete
+C:\Users\WIN10\Desktop\Iot\Azra\Win form\Azra-IOT\obj\Debug\Azra-IOT.exe
+C:\Users\WIN10\Desktop\Iot\Azra\Win form\Azra-IOT\obj\Debug\Azra-IOT.pdb
+C:\Users\WIN10\Desktop\Iot\Azra\Win form\Azra-IOT\obj\Debug\Azra-IOT.csprojAssemblyReference.cache
+C:\Users\DT User\Desktop\Azra\Win form\Azra-IOT\bin\Debug\Azra-IOT.exe.config
+C:\Users\DT User\Desktop\Azra\Win form\Azra-IOT\bin\Debug\Azra-IOT.exe
+C:\Users\DT User\Desktop\Azra\Win form\Azra-IOT\bin\Debug\Azra-IOT.pdb
+C:\Users\DT User\Desktop\Azra\Win form\Azra-IOT\bin\Debug\FireSharp.dll
+C:\Users\DT User\Desktop\Azra\Win form\Azra-IOT\bin\Debug\Microsoft.Threading.Tasks.dll
+C:\Users\DT User\Desktop\Azra\Win form\Azra-IOT\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+C:\Users\DT User\Desktop\Azra\Win form\Azra-IOT\bin\Debug\Microsoft.Threading.Tasks.Extensions.dll
+C:\Users\DT User\Desktop\Azra\Win form\Azra-IOT\bin\Debug\Newtonsoft.Json.dll
+C:\Users\DT User\Desktop\Azra\Win form\Azra-IOT\bin\Debug\System.Net.Http.Extensions.dll
+C:\Users\DT User\Desktop\Azra\Win form\Azra-IOT\bin\Debug\System.Net.Http.Primitives.dll
+C:\Users\DT User\Desktop\Azra\Win form\Azra-IOT\bin\Debug\Microsoft.Threading.Tasks.xml
+C:\Users\DT User\Desktop\Azra\Win form\Azra-IOT\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml
+C:\Users\DT User\Desktop\Azra\Win form\Azra-IOT\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+C:\Users\DT User\Desktop\Azra\Win form\Azra-IOT\bin\Debug\Newtonsoft.Json.xml
+C:\Users\DT User\Desktop\Azra\Win form\Azra-IOT\bin\Debug\System.Net.Http.Extensions.xml
+C:\Users\DT User\Desktop\Azra\Win form\Azra-IOT\bin\Debug\System.Net.Http.Primitives.xml
+C:\Users\DT User\Desktop\Azra\Win form\Azra-IOT\obj\Debug\Azra-IOT.csproj.App.config
+C:\Users\DT User\Desktop\Azra\Win form\Azra-IOT\obj\Debug\Azra-IOT.csproj.AssemblyReference.cache
+C:\Users\DT User\Desktop\Azra\Win form\Azra-IOT\obj\Debug\Azra_IOT.Form1.resources
+C:\Users\DT User\Desktop\Azra\Win form\Azra-IOT\obj\Debug\Azra_IOT.Properties.Resources.resources
+C:\Users\DT User\Desktop\Azra\Win form\Azra-IOT\obj\Debug\Azra-IOT.csproj.GenerateResource.cache
+C:\Users\DT User\Desktop\Azra\Win form\Azra-IOT\obj\Debug\Azra-IOT.csproj.CoreCompileInputs.cache
+C:\Users\DT User\Desktop\Azra\Win form\Azra-IOT\obj\Debug\Azra-IOT.csproj.CopyComplete
+C:\Users\DT User\Desktop\Azra\Win form\Azra-IOT\obj\Debug\Azra-IOT.exe
+C:\Users\DT User\Desktop\Azra\Win form\Azra-IOT\obj\Debug\Azra-IOT.pdb

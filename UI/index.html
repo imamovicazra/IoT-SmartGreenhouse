@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+    <head>
+        <title>Smart greenhouse</title>
+        <link
+            href="https://fonts.googleapis.com/css?family=Open+Sans:400,600"
+            rel="stylesheet">
+        <!-- Required Fremwork -->
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="assets/css/bootstrap/css/bootstrap.min.css">
+        <!-- themify-icons line icon -->
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="assets/icon/themify-icons/themify-icons.css">
+        <!-- ico font -->
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="assets/icon/icofont/css/icofont.css">
+        <!-- Style.css -->
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="assets/css/jquery.mCustomScrollbar.css">
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"/>
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="font-awesome/css/font-awesome.min.css"/>
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+        <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-database.js"></script>
+        <script src="node_modules/chart.js/dist/chart.js"></script>
+    </head>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+    <style>
+        .main-body{
+            background-image: url("test.jpg");
+            background-size:cover;
+            height: 100vh;       
+            overflow: hidden;      
+        }
+        .naslov
+        {
+            font-size: 60px;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+        }
+    </style>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyDsehn8ujZGDs9l3SG45-WSi26G4Sa4RtY",
+          authDomain: "iot-azra.firebaseapp.com",
+          databaseURL: "https://iot-azra-default-rtdb.europe-west1.firebasedatabase.app",
+          projectId: "iot-azra",
+          storageBucket: "iot-azra.appspot.com",
+          messagingSenderId: "214857842734",
+          appId: "1:214857842734:web:148eb17b029fe2f478dfbf"
+        };
+      
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+      </script>
+    <body>
+        <div class="main-body">
+            <div class="page-wrapper" style="width: 80%; margin: auto;">
+                <div>
+                    <h1 class="naslov" style="color: white; text-align: center; padding-bottom: 5%; padding-top: 5%;"><i class="fa fa-leaf" aria-hidden="true"></i> SMART GREENHOUSE <i class="fa fa-leaf" aria-hidden="true"></i></h1>
+                   
+                </div>
+                <div id="dan_s" class="card" style="text-align: center; width: 100%; background-color: white; color: darkgreen; top: 30%;">
+                    <h1  id="dan_t" class="card-title">Kontroler svjetlosti</h1>
+                    <h2 id="dan"></h2>
+                    <h2 id="intenz"></h2>
+                </div>
+                <div id="tempp" class="card" style="text-align: center; width: 100%; background-color: white; color: darkgreen; top: 30%;">
+                    <h1 class="card-title">Kontroler temperature</h1>
+                    <h2 id="temp"></h2>
+                </div>
+                <div id="vlaznostt" class="card"  style="text-align: center; width: 100%; background-color: white; color:darkgreen; top: 30%;">
+                    <h1 class="card-title">Kontroler vlaznosti</h1>
+                    <h2 id="vlaznost"></h2>
+                </div>
+                <!--<div class="card" style="visibility: hidden;">
+                    <h1 class="card-title">Kontroler vlaznosti</h1>
+                    <h2 id="vlaznost"></h2>
+                </div>
+                <div class="card" style="visibility: hidden;">
+                    <h1 class="card-title">Kontroler vlaznosti</h1>
+                    <h2 id="vlaznost"></h2>
+                </div>-->
+                        
+                        <script>
+
+                            firebase
+                                .database()
+                                .ref('/')
+                                .on('value', (snapshot) => {
+                                    $('#dan').html(snapshot.child('dan').val());
+                                    $('#temp').html(snapshot.child('vlaznost').val());
+                                    $('#vlaznost').html(snapshot.child('temperatura').val());
+                                    $('#intenz').html(snapshot.child('intenz').val());
+                                    let str = snapshot.child('vlaznost').val();
+                                    let str2=snapshot.child('temperatura').val();
+                                    let dan = snapshot.child('dan').val();
+                                    if(str.substring(13,15)>=29){
+                                        $('#tempp').css("background-color", "red");
+                                    }else if(str.substring(13,15)<=28){
+                                        $('#tempp').css("background-color", "cornflowerblue");
+                                    }
+
+                                    if(str.substring(13,15)>=29){
+                                        $('#tempp').css("background-color", "red");
+                                        $('#tempp').css("color", "white");
+                                    }else if(str.substring(13,15)<=28){
+                                        $('#tempp').css("background-color", "white");
+                                        $('#tempp').css("color", "darkgreen");
+                                    }
+                                    
+                                    if(str2.substring(16,18)<=60){
+                                        $('#vlaznostt').css("background-color", "red");
+                                        $('#vlaznostt').css("color", "white");
+                                    }else if(str2.substring(16,18)>60){
+                                        $('#vlaznostt').css("background-color", "white");
+                                        $('#vlaznostt').css("color", "darkgreen");
+                                    }
+                                     console.log(str2.substring(16,18));                                
+                                    if(dan.substring(11,14)=="dan"){
+                                        $('#dan_s').css("background-color", "white");
+                                        $('#dan_t').css("color", "darkgreen");
+                                        $('#dan').css("color", "darkgreen");
+                                        $('#intenz').css("color", "darkgreen");
+
+                                    }else{
+                                        $('#dan_s').css("background-color", "black");
+                                        $('#dan_t').css("color", "white");
+                                        $('#dan').css("color", "white");
+                                        $('#intenz').css("color", "white");
+                                    }
+
+                                })
+                        </script>
+
+                    </div>
+                </div>
+            </div>
+
+            <div id="styleSelector"></div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- Warning Section Starts -->
+<!-- Older IE warning message -->
+<!--[if lt IE 9]> <div class="ie-warning"> <h1>Warning!!</h1> <p>You are using
+an outdated version of Internet Explorer, please upgrade <br/>to any of the
+following web browsers to access this website.</p> <div class="iew-container">
+<ul class="iew-download"> <li> <a href="http://www.google.com/chrome/"> <img
+src="assets/images/browser/chrome.png" alt="Chrome"> <div>Chrome</div> </a>
+</li> <li> <a href="https://www.mozilla.org/en-US/firefox/new/"> <img
+src="assets/images/browser/firefox.png" alt="Firefox"> <div>Firefox</div> </a>
+</li> <li> <a href="http://www.opera.com"> <img
+src="assets/images/browser/opera.png" alt="Opera"> <div>Opera</div> </a> </li>
+<li> <a href="https://www.apple.com/safari/"> <img
+src="assets/images/browser/safari.png" alt="Safari"> <div>Safari</div> </a>
+</li> <li> <a
+href="http://windows.microsoft.com/en-us/internet-explorer/download-ie"> <img
+src="assets/images/browser/ie.png" alt=""> <div>IE (9 & above)</div> </a> </li>
+</ul> </div> <p>Sorry for the inconvenience!</p> </div> <![endif]-->
+<!-- Warning Section Ends -->
+<!-- Required Jquery -->
+<script type="text/javascript" src="assets/js/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery-ui/jquery-ui.min.js"></script>
+<script type="text/javascript" src="assets/js/popper.js/popper.min.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap/js/bootstrap.min.js"></script>
+<!-- jquery slimscroll js -->
+<script
+type="text/javascript"
+src="assets/js/jquery-slimscroll/jquery.slimscroll.js"></script>
+<!-- modernizr js -->
+<script type="text/javascript" src="assets/js/modernizr/modernizr.js"></script>
+<!-- am chart -->
+<script src="assets/pages/widget/amchart/amcharts.min.js"></script>
+<script src="assets/pages/widget/amchart/serial.min.js"></script>
+<!-- Todo js -->
+<script type="text/javascript " src="assets/pages/todo/todo.js "></script>
+<!-- Custom js -->
+<script type="text/javascript" src="assets/pages/dashboard/custom-dashboard.js"></script>
+<script type="text/javascript" src="assets/js/script.js"></script>
+<script type="text/javascript " src="assets/js/SmoothScroll.js"></script>
+<script src="assets/js/pcoded.min.js"></script>
+<script src="assets/js/demo-12.js"></script>
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script>
+var $window = $(window);
+var nav = $('.fixed-button');
+$window.scroll(function () {
+if ($window.scrollTop() >= 200) {
+nav.addClass('active');
+} else {
+nav.removeClass('active');
+}
+});
+</script>
+</body>
+
+</html>
